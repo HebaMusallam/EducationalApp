@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name" translatable="false">EducationalApp</string>
+    <string name="app_content" translatable="false">Web development is the process of creating websites and web applications using technologies such as HTML, CSS, and JavaScript.</string>
+</resources>

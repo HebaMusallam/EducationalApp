@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"> تطبيق تعليمي </string>
+    <string name="app_content">
+        هذا محتوى تعليمي بسيط عن تطوير الويب.</string>
+</resources>
