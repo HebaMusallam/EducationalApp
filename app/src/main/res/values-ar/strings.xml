@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name"> تطبيق تعليمي </string>
-    <string name="app_content">
-        هذا محتوى تعليمي بسيط عن تطوير الويب.</string>
+    <string name="app_content">تطوير الويب هو عملية إنشاء مواقع الويب وتطبيقات الويب باستخدام تقنيات مثل HTML وCSS وJavaScript.
+       </string>
+    <string name = "app_title" translatable="true">اختر اللغة </string>
+    <string name="app_language" translatable="true">اللغة الانجليزية</string>
+    <string name="app_lang" translatable="true">اللغة العربية</string>
+    <string name="app_text" translatable="true">اختر حجم النص</string>
+    <string name="app_size" translatable="true">صغير</string>
+    <string name="app_medium" translatable="true">متوسط</string>
+    <string name="size_large" translatable="true">كبير</string>
 </resources>

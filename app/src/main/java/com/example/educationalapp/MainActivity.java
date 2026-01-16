@@ -1,5 +1,6 @@
 package com.example.educationalapp;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -25,10 +26,24 @@ public class MainActivity extends AppCompatActivity {
     Button saveBtn;
     SharedPreferences preferences;
 
+    @Override
+    protected void attachBaseContext(Context newBase){
+        SharedPreferences prefs = newBase.getSharedPreferences("settings", MODE_PRIVATE);
+        String language = prefs.getString("language", "en");
+
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+
+        Configuration config = new Configuration(newBase.getResources().getConfiguration());
+        config.setLocale(locale);
+
+        super.attachBaseContext(newBase.createConfigurationContext(config));
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        loadLanguage();
+
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
@@ -47,16 +62,13 @@ public class MainActivity extends AppCompatActivity {
 
         loadPreferences();
 
-        saveBtn.setOnClickListener(v -> {
-            savePreferences();
-            recreate();
-        });
+        saveBtn.setOnClickListener(v -> savePreferences());
+
     }
         private void savePreferences(){
             SharedPreferences.Editor editor = preferences.edit();
             if(radioArabic.isChecked()){
                 editor.putString("language","ar");
-                setLanguage("ar");
             }else{
                 editor.putString("language","en");
             }
@@ -71,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 appContent.setTextSize(22);
             }
             editor.apply();
+            recreate();
 
         }
         private void loadPreferences() {
@@ -94,24 +107,4 @@ public class MainActivity extends AppCompatActivity {
                     radioLarge.setChecked(true);
                     appContent.setTextSize(22);
             }
-        }
-        private void setLanguage(String languageCode){
-            Locale locale = new Locale(languageCode);
-            Locale.setDefault(locale);
-            Configuration config = new Configuration();
-            config.setLocale(locale);
-            getResources().updateConfiguration(config, getResources().getDisplayMetrics());
-
-        }
-        public void loadLanguage(){
-            SharedPreferences  prefes  = getSharedPreferences("settings",MODE_PRIVATE);
-            String language = prefes.getString("language","en");
-
-            Locale locale = new Locale(language);
-            Locale.setDefault(locale);
-
-            Configuration config = new Configuration();
-            config.setLocale(locale);
-            getResources().updateConfiguration(config,getResources().getDisplayMetrics());
-        }
-    }
+        }}

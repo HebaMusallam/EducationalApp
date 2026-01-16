@@ -1,4 +1,12 @@
 <resources>
-    <string name="app_name" translatable="false">EducationalApp</string>
-    <string name="app_content" translatable="false">Web development is the process of creating websites and web applications using technologies such as HTML, CSS, and JavaScript.</string>
+    <string name="app_name" translatable="true">EducationalApp</string>
+    <string name="app_content" translatable="true">Web development is the process of creating websites and web applications using technologies such as HTML, CSS, and JavaScript.</string>
+    <string name = "app_title" translatable="true">Choose Language</string>
+    <string name="app_language" translatable="true">English</string>
+    <string name="app_lang" translatable="false">Arabic</string>
+    <string name="app_text" translatable="true">Choose text size</string>
+    <string name="app_size" translatable="true">Small</string>
+    <string name="app_medium" translatable="true">Medium</string>
+    <string name="size_large" translatable="true">Large</string>
+
 </resources>

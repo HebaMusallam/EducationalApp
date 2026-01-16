@@ -10,49 +10,59 @@
         android:id="@+id/appTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Web Development"
-        android:textSize="20sp"
+        android:text="@string/app_name"
+        android:textSize="28sp"
         android:textStyle="bold"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:paddingBottom="22dp"/>
+        android:paddingBottom="12dp"
+        android:layout_marginTop="40dp"/>
     <TextView
         android:id="@+id/appContent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/app_content"
         android:textSize="16sp"
-        android:paddingBottom="22dp"/>
+
+        android:textColor="#000000"
+        android:paddingBottom="22dp"
+        android:layout_marginTop="20dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose Language"
+        android:text="@string/app_title"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
         android:paddingBottom="8dp"
+        android:layout_marginTop="20dp"
         />
     <RadioGroup
         android:id="@+id/radioLanguage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="22dp">
+        android:orientation="vertical"
+        android:paddingBottom="22dp"
+        android:layout_marginTop="20dp">
        <RadioButton
         android:id="@+id/radioEnglish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="English"/>
+        android:text="@string/app_language"
+        android:textSize="24sp"
+        android:textStyle="bold"   />
        <RadioButton
         android:id="@+id/radioArabic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Arabic"/>
+        android:text="@string/app_lang"
+        android:textSize="24sp"
+        android:textStyle="bold" />
     </RadioGroup>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose Text Size"
+        android:text="@string/app_text"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -61,30 +71,40 @@
         android:id="@+id/radioTextSize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="22dp">
+        android:orientation="vertical"
+        android:paddingBottom="22dp"
+        android:layout_marginTop="12dp">
         <RadioButton
             android:id="@+id/radioSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Small"
+            android:text="@string/app_size"
+            android:textSize="24sp"
             />
         <RadioButton
             android:id="@+id/radioMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Medium"/>
+            android:text="@string/app_medium"
+            android:textSize="24sp"
+         />
         <RadioButton
             android:id="@+id/radioLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Large"/>
+            android:text="@string/size_large"
+            android:textSize="24sp"
+            />
     </RadioGroup>
 
     <Button
         android:id="@+id/saveBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save Preferences" />
+        android:text="Save Preferences"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="#000000"
+        android:layout_marginTop="30dp"/>
 
 </LinearLayout>
